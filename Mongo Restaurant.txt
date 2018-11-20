@@ -1,7 +1,0 @@
-9.  db.restaurants.find().pretty()
-10. db.restaurants.insert({name : "Bens house of Steaks" , Cuisine : "Steak" , borough : "Benborough"})
-11. db.restaurants.find({borough : "Queens"}).pretty()
-12. db.restaurants.find({"grades.grade" : "A"}).pretty()
-13. db.restaurants.find({"grades.score" : {$gt:30}}).pretty()
-14. db.restaurants.find({borough : "Queens", cuisine : "Italian"}).pretty()
-15. db.restaurants.find().sort ({"grades.score" : -1}).limit(2).pretty()
