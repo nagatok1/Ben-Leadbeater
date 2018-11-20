@@ -1,0 +1,3 @@
+2.db.zips.find().limit(1).pretty()
+3.db.zips.insert({"_id" : "ben", "city" : "BRIDLINGTON", "loc" : [-99999,99999], "pop": 56433, "state" : "EY"})
+4.

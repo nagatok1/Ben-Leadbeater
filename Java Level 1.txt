@@ -1,0 +1,31 @@
+1.public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println("Hello World!");
+	}
+
+}
+
+2.public class Main {
+
+	public static void main(String[] args) {
+		String Hello = ("Hello World!");
+System.out.println(Hello);
+	}
+
+}
+
+3.public class HelloWorldReturn {
+
+	public static void main(String[] args) {
+	ReturnHelloWorld();
+	}
+
+	static String ReturnHelloWorld() {
+		System.out.println("Hello World!");
+		return ("Hello World!");
+	}
+}
+
+4.
