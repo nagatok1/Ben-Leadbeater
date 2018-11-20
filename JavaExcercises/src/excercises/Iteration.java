@@ -1,9 +1,10 @@
 package excercises;
 
-public class Conditional2 {
+public class Iteration {
 	
 	public static void main(String[] args) {
-		Sum1(0 , 7, false);
+		for (int i=0; i < 10; i++)
+		Sum1(i , 7, true);
 	}
 	
 	public static void Sum1(int x, int y, boolean z) {

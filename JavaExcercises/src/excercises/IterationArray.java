@@ -1,9 +1,16 @@
 package excercises;
 
-public class Conditional2 {
+public class IterationArray {
 	
 	public static void main(String[] args) {
-		Sum1(0 , 7, false);
+		int a[] = {33,45,65,12,23,14,67,43,12,34};
+		for (int i=0; i < 9; i++)
+		{
+			Sum1(a[i] , a[i+1], false);
+			if (i > 9) {
+				break;
+			}
+		}
 	}
 	
 	public static void Sum1(int x, int y, boolean z) {
@@ -11,7 +18,7 @@ public class Conditional2 {
 		System.out.println(y);
 	}
 	else if (y == 0) {
-	System.out.println(x);
+		System.out.println(x);
 	}
 	else if (z == true){
 		System.out.println(x * y);
@@ -19,5 +26,6 @@ public class Conditional2 {
 	else {
 		System.out.println(x + y);
 	}
+	
 }
 }
