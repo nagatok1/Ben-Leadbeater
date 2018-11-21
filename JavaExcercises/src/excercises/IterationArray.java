@@ -4,7 +4,7 @@ public class IterationArray {
 	
 	public static void main(String[] args) {
 		int a[] = {33,45,65,12,23,14,67,43,12,34};
-		for (int i=0; i < 9; i++)
+		for (int i=0; i <= 10; i++)
 		{
 			Sum1(a[i] , a[i+1], false);
 			if (i > 9) {
