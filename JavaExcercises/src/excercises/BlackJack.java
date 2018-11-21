@@ -10,7 +10,15 @@ public class BlackJack {
 	public static void Deal(int x , int y) {
 		System.out.println("Player One " + x);
 		System.out.println("Player Two " + y);
-		if ((x > 21) && (y>21)) {
+		if ((x == 21) || (y == 21)) {
+			if (y != 21) {
+				System.out.println("Player One Wins with Blackjack");
+			}
+			else {
+				System.out.println("Player Two Wins with Blackjack");
+			}
+		}
+		else if ((x > 21) && (y > 21)) {
 			System.out.println("Bust");
 		}
 		else if ((x > 21) && (y < 21)) {
