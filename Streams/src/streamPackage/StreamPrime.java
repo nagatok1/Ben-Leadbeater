@@ -13,7 +13,7 @@ public class StreamPrime {
 		List<Integer> NonPrime = Arrays.asList(10, 7, 3, 9, 11);
 		
 		List<Integer> IsPrime = NonPrime.stream().filter
-				(number -> ((isPrime(number, true) == true))).collect(Collectors.toList());		
+				(number -> ((isPrime(number, true) == true))).sorted().collect(Collectors.toList());		
 		System.out.println(IsPrime);
 	}
 	public static boolean isPrime(int x, Boolean Prime) {
