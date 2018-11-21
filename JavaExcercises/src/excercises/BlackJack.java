@@ -3,11 +3,11 @@ package excercises;
 public class BlackJack {
 
 	public static void main(String[] args) {
-		int num1 = (int)(Math.random() * 21);
-		int num2 = (int)(Math.random() * 21);
-		Blackjack1(num1,num2);
+		int num1 = (int)(1 + (Math.random() * 25));
+		int num2 = (int)(1 + (Math.random() * 25));
+		Deal(num1,num2);
 	}
-	public static void Blackjack1(int x , int y) {
+	public static void Deal(int x , int y) {
 		System.out.println("Player One " + x);
 		System.out.println("Player Two " + y);
 		if ((x > 21) && (y>21)) {
