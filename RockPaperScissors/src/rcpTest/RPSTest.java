@@ -58,28 +58,28 @@ public class RPSTest
 	{
 		int result = RPS.play(4,2); //player = Lizard, comp = Paper
 		
-		assertEquals("Player did not win (Lizard vs Paper",3,result);
+		assertEquals("Player did not win (Lizard vs Paper",1,result);
 	}
 	@Test
 	public void LizardTest2()
 	{
 		int result = RPS.play(4,1); //player = Lizard, comp = Rock
 		
-		assertEquals("Computer did not Win",1,result);
+		assertEquals("Computer did not Win",3,result);
 	}
 	@Test
 	public void SpockTest1()
 	{
 		int result = RPS.play(5,3); //player = Spock, comp = Scissors
 		
-		assertEquals("Player did not Win",3,result);
+		assertEquals("Player did not Win",1,result);
 	}
 	@Test
 	public void SpockTest2()
 	{
 		int result = RPS.play(5,2); //player = Spock, comp = Paper
 		
-		assertEquals("Computer did not Win",1,result);
+		assertEquals("Computer did not Win",3,result);
 	}
 }
 
