@@ -10,6 +10,8 @@ import rcp.RPS;
 	// 1 = ROCK
 	// 2 = PAPER
 	// 3 = SCISSORS
+	// 4 = Lizard
+	// 5 = Spock
 	
 public class RPSTest 
 {
@@ -50,6 +52,34 @@ public class RPSTest
 		int result = RPS.play(2,2); //player = Paper, comp = Paper
 		
 		assertEquals("Not a Draw",2,result);
+	}
+	@Test
+	public void LizardTest1()
+	{
+		int result = RPS.play(4,2); //player = Lizard, comp = Paper
+		
+		assertEquals("Player did not win (Lizard vs Paper",3,result);
+	}
+	@Test
+	public void LizardTest2()
+	{
+		int result = RPS.play(4,1); //player = Lizard, comp = Rock
+		
+		assertEquals("Computer did not Win",1,result);
+	}
+	@Test
+	public void SpockTest1()
+	{
+		int result = RPS.play(5,3); //player = Spock, comp = Scissors
+		
+		assertEquals("Player did not Win",3,result);
+	}
+	@Test
+	public void SpockTest2()
+	{
+		int result = RPS.play(5,2); //player = Spock, comp = Paper
+		
+		assertEquals("Computer did not Win",1,result);
 	}
 }
 
