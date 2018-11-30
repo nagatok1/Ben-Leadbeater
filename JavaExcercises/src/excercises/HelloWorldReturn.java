@@ -6,7 +6,7 @@ public class HelloWorldReturn {
 	ReturnHelloWorld();
 	}
 
-	static String ReturnHelloWorld() {
+	public static String ReturnHelloWorld() {
 		System.out.println("Hello World!");
 		return ("Hello World!");
 	}

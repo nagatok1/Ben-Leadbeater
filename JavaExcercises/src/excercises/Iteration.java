@@ -12,7 +12,7 @@ public class Iteration {
 		System.out.println(y);
 	}
 	else if (y == 0) {
-	System.out.println(x);
+		System.out.println(x);
 	}
 	else if (z == true){
 		System.out.println(x * y);
