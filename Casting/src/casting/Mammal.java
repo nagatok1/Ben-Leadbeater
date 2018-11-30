@@ -11,10 +11,6 @@ public abstract class Mammal extends Animal {
 		this.Species = vSpecies;
 	}
 
-	public Mammal(String vSpecies, String vName) {
-		this(vSpecies, vName, 0);
-	}
-
 	//////////////////////////////// Methods///////////////////////////////////
 
 	public String getSpecies() {

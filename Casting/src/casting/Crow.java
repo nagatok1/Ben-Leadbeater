@@ -15,7 +15,7 @@ public class Crow extends Bird {
 	///////////////////////////////////// Methods////////////////////////////////////////
 
 	public void MakeNoise() {
-		System.out.println("Scraw!");
+		System.out.println(" Scraw!");
 	}
 
 	public String MakeNoise2() {

@@ -15,7 +15,7 @@ public class Cat extends Mammal {
 	///////////////////////////////////// Methods////////////////////////////////////////
 
 	public void MakeNoise() {
-		System.out.println("Meow");
+		System.out.println(" Meow");
 	}
 
 	public String MakeNoise2() {

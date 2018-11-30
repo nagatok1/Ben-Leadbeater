@@ -15,7 +15,7 @@ public class Dog extends Mammal {
 	///////////////////////////////////// Methods////////////////////////////////////////
 
 	public void MakeNoise() {
-		System.out.println("Woof!");
+		System.out.println(" Woof!");
 	}
 
 	public String MakeNoise2() {

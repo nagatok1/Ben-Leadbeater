@@ -19,7 +19,7 @@ public class Eagle extends Bird{
 	/////////////////////////////////////Methods////////////////////////////////////////
 	
 	public String MakeNoise() {
-		System.out.println("Screee!");
+		System.out.println(" Screee!");
 		return " Screee!";
 	}
 	
