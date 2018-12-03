@@ -8,7 +8,8 @@ public class Menu {
 
 	public static int Menu1() {
 		while (true) {
-			System.out.println("Test Treasure Location X:" + (Treasure.x) + " " + "Y:" + (Treasure.y));
+			System.out.println("Test Treasure Location X:" + (Treasure.TreasureX) + " " + "Y:" + (Treasure.TreasureY));
+			System.out.println("Test Lava Location X:" + (Terrain.LavaX) + " " + "Y:" + (Terrain.LavaY));
 			System.out.println("1 - Look");
 			System.out.println("2 - Dig");
 			System.out.println("3 - Move");
@@ -16,13 +17,14 @@ public class Menu {
 			int a = scan.nextInt();
 
 			if (a == 1) {
-				System.out.println("Look (TBC)");
+				System.out.println("Look ");
+				Terrain.TerrainLook();
 			}
 			if (a == 2) {
 				System.out.println("Dig (TBC)");
 			}
 			if (a == 3) {
-				System.out.println("Move (TBC)");
+				System.out.println("Move ");
 				Move.PlayerMove();
 			}
 			if (a == 4) {
