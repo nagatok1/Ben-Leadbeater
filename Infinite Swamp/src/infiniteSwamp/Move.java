@@ -17,18 +17,22 @@ public class Move {
 			int a = scan.nextInt();
 			if (a == 1) {
 				System.out.println("You Move North " + "X:" + (PlayerX) + "Y:" + (++PlayerY));
+				Compass.Direction = "North";
 				Treasure.TreasureLocation();
 			}
 			if (a == 2) {
 				System.out.println("You Move East " + "X:" + (++PlayerX) + "Y:" + PlayerY);
+				Compass.Direction = "East";
 				Treasure.TreasureLocation();
 			}
 			if (a == 3) {
 				System.out.println("You Move South " + "X:" + (PlayerX) + "Y:" + (--PlayerY));
+				Compass.Direction = "South";
 				Treasure.TreasureLocation();
 			}
 			if (a == 4) {
 				System.out.println("You Move West " + "X:" + (--PlayerX) + "Y:" + (PlayerY));
+				Compass.Direction = "South";
 				Treasure.TreasureLocation();
 			}
 			if (a == 5) {

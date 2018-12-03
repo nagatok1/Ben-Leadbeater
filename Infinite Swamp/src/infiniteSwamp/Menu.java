@@ -13,7 +13,8 @@ public class Menu {
 			System.out.println("1 - Look");
 			System.out.println("2 - Dig");
 			System.out.println("3 - Move");
-			System.out.println("4 - Give up");
+			System.out.println("4 - Compass");
+			System.out.println("5 - Give up");
 			int a = scan.nextInt();
 
 			if (a == 1) {
@@ -21,16 +22,27 @@ public class Menu {
 				Terrain.TerrainLook();
 			}
 			if (a == 2) {
-				System.out.println("Dig (TBC)");
+				System.out.println("Dig Not Implemented");
+				Menu1();
 			}
 			if (a == 3) {
 				System.out.println("Move ");
 				Move.PlayerMove();
 			}
 			if (a == 4) {
+				System.out.println("You Check your Compass");
+				System.out.println("You are facing " + Compass.Direction);
+				Menu1();
+
+			}
+			if (a == 5) {
 				System.out.println("You Give up and Die. Crows peck your eyes out because Reasons (TBC)");
 				System.exit(0);
 
+			}
+			else {
+				System.out.println("*************INVALID INPUT*************");
+				Menu1();
 			}
 			return a;
 		}
