@@ -17,11 +17,7 @@ public class Main {
 		Zoo.add(Lingo);
 		Zoo.add(Dingo);
 		Zoo.add(Singo);
-		System.out.println(Zoo);
-		Bingo.MakeNoise();
-		Lingo.MakeNoise();
-		Dingo.MakeNoise();
-		Singo.MakeNoise();
+		List<String> Mammals = Zoo.stream().map
 
 	}
 

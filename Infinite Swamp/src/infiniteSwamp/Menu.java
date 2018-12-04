@@ -22,7 +22,7 @@ public class Menu {
 				Terrain.TerrainLook();
 			}
 			if (a == 2) {
-				System.out.println("Dig Not Implemented");
+				System.out.println("***Dig Not Implemented***");
 				Menu1();
 			}
 			if (a == 3) {
