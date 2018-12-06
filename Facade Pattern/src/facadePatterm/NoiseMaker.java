@@ -11,16 +11,16 @@ public class NoiseMaker {
 		Crow = new Crow();
 	}
 
-	public void DogNoise() {
-		Dog.makenoise();
+	public String DogNoise() {
+		return Dog.makenoise();
 	}
 
-	public void CatNoise() {
-		Cat.makenoise();
+	public String CatNoise() {
+		return Cat.makenoise();
 	}
 
-	public void CrowNoise() {
-		Crow.makenoise();
+	public String CrowNoise() {
+		return Crow.makenoise(); 
 	}
 
 }
