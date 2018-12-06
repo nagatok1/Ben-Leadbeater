@@ -6,6 +6,7 @@ public class Move {
 
 	public static void PlayerMove() {
 		while (true) {
+			System.out.println("Which Direction would you like to move?");
 			System.out.println("1 - Move North?");
 			System.out.println("2 - Move East?");
 			System.out.println("3 - Move South?");
