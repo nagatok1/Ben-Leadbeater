@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Treasure {
 	static Random rand = new Random();
-	static int TreasureX = rand.nextInt((9) + 1);
-	static int TreasureY = rand.nextInt((9) + 1);
+	static int TreasureX = - 50 + rand.nextInt((49) + 1);
+	static int TreasureY = - 50 + rand.nextInt((49) + 1);
 
 	public static void TreasureLocation() {
 

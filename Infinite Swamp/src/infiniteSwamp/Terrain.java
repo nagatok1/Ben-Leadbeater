@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class Terrain {
 	static Random rand = new Random();
-	static int LavaX = rand.nextInt((9) + 1);
-	static int LavaY = rand.nextInt((9) + 1);
-	static int SwampX = rand.nextInt((9) + 1);
-	static int SwampY = rand.nextInt((9) + 1);
-	static int CastleX = rand.nextInt((9) + 1);
-	static int CastleY = rand.nextInt((9) + 1);
-	static int HoleX = rand.nextInt((9) + 1);
-	static int HoleY = rand.nextInt((9) + 1);
+	static int LavaX = - 50 + rand.nextInt((49) + 1);
+	static int LavaY = - 50 + rand.nextInt((49) + 1);
+	static int SwampX = - 50 + rand.nextInt((49) + 1);
+	static int SwampY = - 50 + rand.nextInt((49) + 1);
+	static int CastleX = - 50 + rand.nextInt((49) + 1);
+	static int CastleY = - 50 + rand.nextInt((49) + 1);
+	static int HoleX = - 50 + rand.nextInt((49) + 1);
+	static int HoleY = - 50 + rand.nextInt((49) + 1);
 
 	public static void TerrainLook() {
 		if (Move.PlayerX == LavaX) {

@@ -41,7 +41,6 @@ public class Menu {
 
 			}
 			else {
-				System.out.println("*************INVALID INPUT*************");
 				Menu1();
 			}
 			return a;
