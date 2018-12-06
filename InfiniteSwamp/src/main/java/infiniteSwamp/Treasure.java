@@ -4,9 +4,8 @@ import java.util.Random;
 
 public class Treasure {
 	static Random rand = new Random();
-	static int TreasureX = -50 + rand.nextInt((49) + 1);
-	static int TreasureY = -50 + rand.nextInt((49) + 1);
-
+	static int TreasureX = - 5000 + rand.nextInt(5000);
+	static int TreasureY = - 5000 + rand.nextInt(5000);
 	public static void TreasureLocation() {
 
 		if ((Move.PlayerX == TreasureX) && (Move.PlayerY == TreasureY)) {

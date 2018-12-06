@@ -15,12 +15,11 @@ public class Menu {
 			int a = scan.nextInt();
 
 			if (a == 1) {
-				System.out.println("Look ");
 				Terrain.TerrainLook();
 				Menu1();
 			}
 			if (a == 2) {
-				System.out.println("***Dig Not Implemented***");
+				Dig.DigNow();
 				Menu1();
 			}
 			if (a == 3) {

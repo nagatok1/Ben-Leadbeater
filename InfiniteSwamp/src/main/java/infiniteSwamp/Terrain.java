@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class Terrain {
 	static Random rand = new Random();
-	static int LavaX = - 50 + rand.nextInt((49) + 1);
-	static int LavaY = - 50 + rand.nextInt((49) + 1);
-	static int SwampX = - 50 + rand.nextInt((49) + 1);
-	static int SwampY = - 50 + rand.nextInt((49) + 1);
-	static int CastleX = - 50 + rand.nextInt((49) + 1);
-	static int CastleY = - 50 + rand.nextInt((49) + 1);
-	static int HoleX = - 50 + rand.nextInt((49) + 1);
-	static int HoleY = - 50 + rand.nextInt((49) + 1);
+	static int LavaX = - 5000 + rand.nextInt(5000);
+	static int LavaY = - 5000 + rand.nextInt(5000);
+	static int SwampX = - 5000 + rand.nextInt(5000);
+	static int SwampY = - 5000 + rand.nextInt(5000);
+	static int CastleX = - 5000 + rand.nextInt(5000);
+	static int CastleY = - 5000 + rand.nextInt(5000);
+	static int HoleX = - 5000 + rand.nextInt(5000);
+	static int HoleY = - 5000 + rand.nextInt(5000);
 
 	public static void TerrainLook() {
 		
