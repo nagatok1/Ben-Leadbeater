@@ -1,11 +1,11 @@
 package dogShow;
 
-import java.util.Scanner;
+
 import java.util.stream.IntStream;
 
 public class DogShow {
 
-	public  static void DogPosition(int mydog, int NumberofDogs) {
+	public static int DogPosition(int mydog, int NumberofDogs) {
 		IntStream.range(1, NumberofDogs + 1).forEach(
 			i -> {
 			if (i == mydog) {
@@ -32,5 +32,6 @@ public class DogShow {
 				return;
 			}
 		});
+		return mydog;
 	}
 }

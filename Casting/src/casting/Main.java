@@ -1,7 +1,6 @@
 package casting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -17,7 +16,6 @@ public class Main {
 		Zoo.add(Lingo);
 		Zoo.add(Dingo);
 		Zoo.add(Singo);
-		List<String> Mammals = Zoo.stream().map
 
 	}
 
