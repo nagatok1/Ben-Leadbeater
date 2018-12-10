@@ -294,14 +294,14 @@ public class RPS
 	public void printStats()
 	{
 		System.out.println("");
-		System.out.println("Games played: " + this.GameCount);
-		System.out.println("Player wins: " +  this.PlayerWins);
-		System.out.println("Comp wins: " +  this.CompWins);
-		System.out.println("Ties: " + this.Ties);
-		System.out.println("Rocks picked: " + this.RockPicked + " " + (this.RockPicked/(GameCount*2.0))*100.0 + "%");
-		System.out.println("Scissors picked: " + this.ScissorsPicked + " " + (this.ScissorsPicked/(GameCount*2.0))*100.0 + "%");
-		System.out.println("Paper picked: " + this.PaperPicked + " " + (this.PaperPicked/(GameCount*2.0))*100.0 + "%");
-		System.out.println("Lizard picked: " + this.LizardPicked + " " + (this.LizardPicked/(GameCount*2.0))*100.0 + "%");
-		System.out.println("Spock picked: " + this.SpockPicked + " " + (this.SpockPicked/(GameCount*2.0))*100.0 + "%");
+		System.out.println("Games played: " + GameCount);
+		System.out.println("Player wins: " +  PlayerWins);
+		System.out.println("Comp wins: " +  CompWins);
+		System.out.println("Ties: " + Ties);
+		System.out.println("Rocks picked: " + RockPicked + " " + (RockPicked/(GameCount*2.0))*100.0 + "%");
+		System.out.println("Scissors picked: " + ScissorsPicked + " " + (ScissorsPicked/(GameCount*2.0))*100.0 + "%");
+		System.out.println("Paper picked: " + PaperPicked + " " + (PaperPicked/(GameCount*2.0))*100.0 + "%");
+		System.out.println("Lizard picked: " + LizardPicked + " " + (LizardPicked/(GameCount*2.0))*100.0 + "%");
+		System.out.println("Spock picked: " + SpockPicked + " " + (SpockPicked/(GameCount*2.0))*100.0 + "%");
 	}
 }
