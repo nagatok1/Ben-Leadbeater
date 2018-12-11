@@ -29,7 +29,8 @@ public class Main {
 			System.out.println("1 - Car");
 			System.out.println("2 - Bus");
 			System.out.println("3 - Motorcycle");
-			System.out.println("4 - Exit");
+			System.out.println("4 - Print Garage");
+			System.out.println("5 - Exit");
 			Scanner scan2 = new Scanner(System.in);
 			int choice = scan.nextInt();
 			if (choice == 1) {
@@ -63,8 +64,12 @@ public class Main {
 				Garage1.add(Motorcycle);
 			}
 			if (choice == 4) {
-				scan2.close();
+				System.out.println(Garage1);
 				break;
+			}
+			if (choice == 5) {
+				scan2.close();
+				System.exit(0);
 			}
 		}
 	}
