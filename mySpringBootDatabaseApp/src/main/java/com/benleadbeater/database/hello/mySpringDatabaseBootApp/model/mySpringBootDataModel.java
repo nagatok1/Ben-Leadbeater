@@ -1,11 +1,10 @@
-package com.benleadbeater.database.hello.mySpringDatabaseBootApp.model;
-
-import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
+ package com.benleadbeater.database.hello.mySpringDatabaseBootApp.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -15,25 +14,22 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "car")
+@Table(name = "person")
 @EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = {"creationDate","last/modified"}, allowGetters = true)
-public class MySpringBootDataModel implements Serializable{
+@JsonIgnoreProperties(value = {"creationDate","lastModified"}, allowGetters = true)
+public class mySpringBootDataModel implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@NotBlank
-	private String type;
-	
+
 	@NotBlank
 	private String name;
 	
 	@NotBlank
-	private String make;
+	private String address;
 	
-	private Integer topspeed;
+	private Integer age;
 	
 	@Column(nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -45,20 +41,21 @@ public class MySpringBootDataModel implements Serializable{
 	@LastModifiedDate
 	private Date lastModified;
 	
+	public mySpringBootDataModel(String vname, String vaddress, int vage) {
+	this.name = vname;
+	this.address = vaddress;
+	this.age = vage;
+	}
+	
+	public mySpringBootDataModel() {
+	}
+	
 	public Long getId() {
 		return this.id;
 	}
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public String getType() {
-		return this.type;
-	}
-	
-	public void setType() {
-		this.type = type;
 	}
 	
 	public String getName() {
@@ -69,20 +66,20 @@ public class MySpringBootDataModel implements Serializable{
 		this.name = name;
 	}
 	
-	public String getMake() {
-		return this.make;
+	public String getAddress() {
+		return this.address;
 	}
 	
-	public void setMake(String make) {
-		this.make = make;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
-	public Integer getTopSpeed() {
-		return this.topspeed;
+	public Integer getAge() {
+		return this.age;
 	}
 	
-	public void setTopSpeed(int topspeed) {
-		this.topspeed = topspeed;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 	
 	public Date getCreationDate() {
@@ -101,6 +98,5 @@ public class MySpringBootDataModel implements Serializable{
 		this.lastModified = lastModified;
 	}
 	
-	
-
-}
+		
+}         

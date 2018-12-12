@@ -26,47 +26,46 @@ public class MySpringBootDataAppController {
 	@Autowired
 	GarageRepository myRepository;
 	
-	//Create Car
-	@PostMapping("/car")
-	public MySpringBootDataModel createcar(@Valid @RequestBody MySpringBootDataModel mSDM) {
+	//Create Vehicle
+	@PostMapping("/vehicle")
+	public MySpringBootDataModel createvehicle(@Valid @RequestBody MySpringBootDataModel mSDM) {
 		return myRepository.save(mSDM);
 	}
 	
-	//Get Car
-	@GetMapping ("car/{id}")
-	public MySpringBootDataModel getcarbyID(@PathVariable(value = "id")Long carID) {
-		return myRepository.findById(carID).orElseThrow(()-> new ResourceNotFoundException("MySpringBootDataModel","id",carID));
+	//Get Vehicle
+	@GetMapping ("vehicle/{id}")
+	public MySpringBootDataModel getvehiclebyID(@PathVariable(value = "id")Long vehicleID) {
+		return myRepository.findById(vehicleID).orElseThrow(()-> new ResourceNotFoundException("MySpringBootDataModel","id",vehicleID));
 	}
 	
-	//Get All Cars
-	@GetMapping("/car")
-	public List<MySpringBootDataModel> getAllPeople(){
+	//Get All Vehicles
+	@GetMapping("/vehicle")
+	public List<MySpringBootDataModel> getAllVehicles(){
 		return myRepository.findAll();
 	}
 	
-	//Update a Car PUT /api/car/{carID}
-	@PutMapping("/car/{id}")
-	public MySpringBootDataModel updatecar(@PathVariable(value = "id") Long carID,
-			@Valid @RequestBody MySpringBootDataModel carDetails) {
+	//Update a Vehicle PUT /api/vehicle/{vehicleID}
+	@PutMapping("/vehicle/{id}")
+	public MySpringBootDataModel updatevehicle(@PathVariable(value = "id") Long vehicleID,
+			@Valid @RequestBody MySpringBootDataModel vehicleDetails) {
 		
-		MySpringBootDataModel mSDM = myRepository.findById(carID).orElseThrow(() -> new ResourceNotFoundException("car","id",carID));
+		MySpringBootDataModel mSDM = myRepository.findById(vehicleID).orElseThrow(() -> new ResourceNotFoundException("car","id",vehicleID));
 		
-		mSDM.setName(carDetails.getName());
-		mSDM.setMake(carDetails.getMake());
-		mSDM.setTopSpeed(carDetails.getTopSpeed());
+		mSDM.setName(vehicleDetails.getName());
+		mSDM.setMake(vehicleDetails.getMake());
+		mSDM.setTopSpeed(vehicleDetails.getTopSpeed());
 		
 		MySpringBootDataModel updateData = myRepository.save(mSDM);
 		return updateData;
 	}
 	
-	//Remove a Car
-	@DeleteMapping("/car/{id}")
-	public ResponseEntity<?> deletecar(@PathVariable(value = "id")Long carID){
-		MySpringBootDataModel mSDM = myRepository.findById(carID).orElseThrow(()-> new ResourceNotFoundException("car","id",carID));
+	//Remove a Vehicle by ID
+	@DeleteMapping("/vehicle/{id}")
+	public ResponseEntity<?> deleteVehiclebyID(@PathVariable(value = "id")Long vehicleID){
+		MySpringBootDataModel mSDM = myRepository.findById(vehicleID).orElseThrow(()-> new ResourceNotFoundException("vehicle","id",vehicleID));
 		
 		myRepository.delete(mSDM);
 		return ResponseEntity.ok().build();
 	}
-			
 
 }
