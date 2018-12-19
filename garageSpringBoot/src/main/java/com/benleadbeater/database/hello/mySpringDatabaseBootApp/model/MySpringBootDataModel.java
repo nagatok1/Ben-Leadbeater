@@ -1,7 +1,5 @@
 package com.benleadbeater.database.hello.mySpringDatabaseBootApp.model;
 
-import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +13,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "car")
+@Table(name = "Vehicle")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"creationDate","last/modified"}, allowGetters = true)
 public class MySpringBootDataModel implements Serializable{
@@ -24,7 +22,6 @@ public class MySpringBootDataModel implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank
 	private String type;
 	
 	@NotBlank
@@ -33,7 +30,7 @@ public class MySpringBootDataModel implements Serializable{
 	@NotBlank
 	private String make;
 	
-	private Integer topspeed;
+	private Integer topSpeed;
 	
 	@Column(nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -45,6 +42,15 @@ public class MySpringBootDataModel implements Serializable{
 	@LastModifiedDate
 	private Date lastModified;
 	
+	public MySpringBootDataModel(String type, String name, String make, int topSpeed) {
+		this.type = type;
+		this.name = name;
+		this.make = make;
+		this.topSpeed = topSpeed;
+	}
+	
+	public MySpringBootDataModel() {}
+
 	public Long getId() {
 		return this.id;
 	}
@@ -57,7 +63,7 @@ public class MySpringBootDataModel implements Serializable{
 		return this.type;
 	}
 	
-	public void setType() {
+	public void setType(String type) {
 		this.type = type;
 	}
 	
@@ -78,11 +84,11 @@ public class MySpringBootDataModel implements Serializable{
 	}
 	
 	public Integer getTopSpeed() {
-		return this.topspeed;
+		return this.topSpeed;
 	}
 	
-	public void setTopSpeed(int topspeed) {
-		this.topspeed = topspeed;
+	public void setTopSpeed(int topSpeed) {
+		this.topSpeed = topSpeed;
 	}
 	
 	public Date getCreationDate() {

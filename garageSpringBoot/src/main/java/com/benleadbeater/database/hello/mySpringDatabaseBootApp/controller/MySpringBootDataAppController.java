@@ -34,8 +34,8 @@ public class MySpringBootDataAppController {
 	
 	//Get Vehicle
 	@GetMapping ("vehicle/{id}")
-	public MySpringBootDataModel getvehiclebyID(@PathVariable(value = "id")Long vehicleID) {
-		return myRepository.findById(vehicleID).orElseThrow(()-> new ResourceNotFoundException("MySpringBootDataModel","id",vehicleID));
+	public MySpringBootDataModel getvehiclebyID(@PathVariable("id")Long id) {
+		return myRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("MySpringBootDataModel","id",id));
 	}
 	
 	//Get All Vehicles
@@ -43,26 +43,26 @@ public class MySpringBootDataAppController {
 	public List<MySpringBootDataModel> getAllVehicles(){
 		return myRepository.findAll();
 	}
-	
-	//Update a Vehicle PUT /api/vehicle/{vehicleID}
+
+	//Update a Vehicle PUT /api/vehicle/{id}
 	@PutMapping("/vehicle/{id}")
-	public MySpringBootDataModel updatevehicle(@PathVariable(value = "id") Long vehicleID,
-			@Valid @RequestBody MySpringBootDataModel vehicleDetails) {
+	public MySpringBootDataModel updatevehicle(@PathVariable("id") Long id, @Valid @RequestBody MySpringBootDataModel vehicleDetails) {
 		
-		MySpringBootDataModel mSDM = myRepository.findById(vehicleID).orElseThrow(() -> new ResourceNotFoundException("car","id",vehicleID));
+		MySpringBootDataModel mSDM = myRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("vehicle","id",id));
 		
+		mSDM.setType(vehicleDetails.getType());
 		mSDM.setName(vehicleDetails.getName());
 		mSDM.setMake(vehicleDetails.getMake());
 		mSDM.setTopSpeed(vehicleDetails.getTopSpeed());
 		
 		MySpringBootDataModel updateData = myRepository.save(mSDM);
 		return updateData;
-	}
-	
+	} 
+
 	//Remove a Vehicle by ID
 	@DeleteMapping("/vehicle/{id}")
-	public ResponseEntity<?> deleteVehiclebyID(@PathVariable(value = "id")Long vehicleID){
-		MySpringBootDataModel mSDM = myRepository.findById(vehicleID).orElseThrow(()-> new ResourceNotFoundException("vehicle","id",vehicleID));
+	public ResponseEntity<?> deleteVehiclebyID(@PathVariable("id")Long id){
+		MySpringBootDataModel mSDM = myRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("vehicle","id",id));
 		
 		myRepository.delete(mSDM);
 		return ResponseEntity.ok().build();

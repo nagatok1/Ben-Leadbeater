@@ -35,7 +35,7 @@ public class RepositoryTest {
 		mySpringBootDataModel model1 = new mySpringBootDataModel("Bobby", "Space", 50);
 		entityManager.persist(model1);
 		entityManager.flush();
-		assertTrue(MyRepo.findById(model1.getId()).isPresent());
+		assertTrue(MyRepo.findById(model1.getId()).isPresent()); 
 	}
 
 }
